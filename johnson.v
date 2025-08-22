@@ -6,6 +6,6 @@ module johnson_counter (
         if (rst) 
             out <= 4'b0000;
         else 
-            out <= {~out[0], out[3:1]};
+            out <= {out[2:0], ~out[3]};
     end
 endmodule
